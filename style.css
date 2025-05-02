@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #ccee66;
+    color: #fff;
+    padding: 20px 160px; 
+    height: 100vh;
+
+    overflow: hidden; /* oq eu vai sobrar na tela, esconde*/
+    font-family: "Noto Sans", sans-serif;
+}
+
+body::before{
+    content: '';
+    background-color: #202020;
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    top: 0;
+    left: -1500px;
+    transform: rotate(-70deg);
+}
+
+body::after{
+    content: 'Nike';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    font-size: 250px;
+    font-weight: bold;
+    opacity: 0.2;
+}
+
+
+.logo{
+    width: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+h4{
+    font-size: 30px;
+}
+
+h1{
+    font-size: 80px;
+}
+p{
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.botao-carrinho{
+    background: #c6f00d;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.botao-carrinho:hover{
+    opacity: 0.7;
+}
+
+.imagem-tenis{
+    width: 800px;
+    filter: drop-shadow(30px 45px 40px #000000);
+    transition: 1s;
+    animation: flutuar 3s ease-in-out infinite;
+}
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+        rotate: -25deg;
+        
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+.troca-efeito{
+    opacity: 0;
+    transform: rotate(-25deg) translateY(-30px);
+}
+
+.caixa-principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75%;
+    position: relative;
+    z-index: 1;
+}
+
+.caixa-texto{
+    max-width: 500px;
+}
+
+.caixa-botoes{
+    z-index: 1;
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+.botoes{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.botoes:active{
+    opacity: 0.6;
+}
+
+.verde{
+    background: #c6f00d;
+    transition: 1s;
+}
+.azul{
+    background: #4417e6;
+    transition: 1s;
+}
+.rosa{
+    background: #ec539f;
+    transition: 1s;
+}
+
+.verde:hover, .azul:hover, .rosa:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(200, 241, 153, 0.3);
+}
+.azul:active, .verde:active, .rosa:active{
+    transform: translateY(10px);
+    box-shadow: 0 -10px 20px rgba(160, 182, 212, 0.856);
+}
